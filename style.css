@@ -1,9 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+}
 .calculator{
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
+    width: 320px;
+    border: 2px solid #000; 
+    border-radius: 15px;
+}
+
+.first_row{
+    display: flex;
+    height: 100px;
+    font-size: 40px;
+    padding-right: 5px;
+    align-items: center;
+    justify-content:right;
+    border: 1px solid #000;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.rest{
+    display: flex;
+    flex-direction: row;
 }
 
 .second_row, .third_row, .fourth_row, .fifth_row, .sixth_row{
     display: flex;
     flex-direction: row;
+}
+
+button{  
+    width:80px;
+    font-size: 30px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+/* Hover effect */
+button:hover {
+    background-color: #45a049;    /* Darker green on hover */
+    transform: scale(1.02);       /* Slightly increase size on hover */
+}
+
+/* Click effect */
+button:active {
+    background-color: #388e3c;    /* Even darker green when clicked */
+    transform: scale(0.95);       /* Slightly decrease size when clicked */
+}
+.left_rounded{
+    border-bottom-left-radius: 13px;
+}
+.right_rounded{
+    border-bottom-right-radius: 13px;
 }
