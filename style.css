@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
 }
+
+/* Set Calculator parameters */
 .calculator{
     display: flex;
     flex-direction: column;
@@ -11,6 +13,7 @@ body{
     border-radius: 15px;
 }
 
+/* Set first row parameters */
 .first_row{
     display: flex;
     height: 100px;
@@ -18,21 +21,38 @@ body{
     padding-right: 5px;
     align-items: center;
     justify-content:right;
+
     border: 1px solid #000;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
+
+    background-color: rgba(0, 0, 0, 0.498);
+    color: white;
+    font-weight: bold;
 }
 
+/* Set direction for all the rows */
 .rest{
     display: flex;
     flex-direction: row;
 }
 
+/* Set row parameters */
 .second_row, .third_row, .fourth_row, .fifth_row, .sixth_row{
     display: flex;
     flex-direction: row;
 }
 
+/* Set button backbround colors */
+.second_row button{
+    background-color: beige;
+}
+
+.third_row button, .fourth_row button, .fifth_row button, .sixth_row button{
+    background-color: blanchedalmond;
+}
+
+/* Set button default parameters */
 button{  
     width:80px;
     font-size: 30px;
@@ -41,18 +61,21 @@ button{
 }
 /* Hover effect */
 button:hover {
-    background-color: #45a049;    /* Darker green on hover */
-    transform: scale(1.02);       /* Slightly increase size on hover */
+    background-color: #45a049;    
+    transform: scale(1.02);       
 }
 
 /* Click effect */
 button:active {
-    background-color: #388e3c;    /* Even darker green when clicked */
-    transform: scale(0.95);       /* Slightly decrease size when clicked */
+    background-color: #388e3c;    
+    transform: scale(0.95);       
 }
+
+/*Round bottom buttons to match calculator*/
 .left_rounded{
     border-bottom-left-radius: 13px;
 }
 .right_rounded{
     border-bottom-right-radius: 13px;
+    background-color: pink;
 }
