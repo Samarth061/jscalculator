@@ -1,0 +1,9 @@
+.calculator{
+    display: flex;
+    flex-direction: column;
+}
+
+.second_row, .third_row, .fourth_row, .fifth_row, .sixth_row{
+    display: flex;
+    flex-direction: row;
+}
