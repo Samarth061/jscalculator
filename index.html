@@ -5,40 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="calc.js"></script>
+    <script src="calc.js" defer></script>
 </head>
 <body>
     <div class="calculator">
         <div class="first_row">
-            <div>OUPUT</div>
         </div>
         <div class="second_row">
-            <button>+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>%</button>
+            <button class="operator">+</button>
+            <button class="operator">-</button>
+            <button class="operator">x</button>
+            <button class="operator">/</button>
         </div>
         <div class="rest">
             <div class="left">
                 <div class="third_row">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
                 </div>
                 <div class="fourth_row">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
                 </div>
                 <div class="fifth_row">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
                 </div>
                 <div class="sixth_row">
-                    <button class="left_rounded">0</button>
+                    <button class="left_rounded number">0</button>
                     <button>.</button>
-                    <button>AC</button>
+                    <button class="AC">AC</button>
                 </div>
             </div>
             <button class="right_rounded">=</button>
