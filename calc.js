@@ -7,7 +7,8 @@ let clearButton = document.querySelector('.AC');
 let currentNumber = '';    
 let currentTotal = 0;      
 let currentOperator = '';  
-let isNewNumber = false;   
+let isNewNumber = false;
+let errorState = false;   
 
 // Number buttons
 number.forEach(button => {
@@ -15,6 +16,7 @@ number.forEach(button => {
         if (isNewNumber) {
             currentNumber = ''; 
             isNewNumber = false;
+            errorState = false;
         }
         currentNumber += button.textContent;  
         output.textContent = currentNumber;  
@@ -48,14 +50,28 @@ function calculate() {
 
     if (currentOperator === '+') {
         currentTotal += inputNumber;
+        currentTotal = Math.round(currentTotal*100)/100;
     } else if (currentOperator === '-') {
         currentTotal -= inputNumber;
+        currentTotal = Math.round(currentTotal*100)/100;
     } else if (currentOperator === 'x') {
         currentTotal *= inputNumber;
+        currentTotal = Math.round(currentTotal*100)/100;
     }else if (currentOperator === '/') {
-        currentTotal /= inputNumber;
+        if (inputNumber === 0) {
+            output.textContent = "Error"; 
+            errorState = true;            
+            currentTotal = 0;             
+            currentNumber = '';           
+            return;                       
+        } else {
+            currentTotal /= inputNumber;
+            currentTotal = Math.round(currentTotal*100)/100;
+            console.log(currentTotal);
+        }
     }
 
+    output.textContent = currentTotal;
     currentNumber = '';  
 }
 
@@ -65,4 +81,5 @@ clearButton.addEventListener('click', () => {
     currentTotal = 0;
     currentOperator = '';
     output.textContent = '';
+    errorState = false;
 });
